@@ -39,4 +39,3 @@ let scientistDB: {
     this.scientists.push(x);
   },
 };
-
