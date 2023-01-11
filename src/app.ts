@@ -55,7 +55,3 @@ let scientistDB: {
         this.scientists.push(x)
     }
 }
-
-// Testar distmappen
-// Testar distmappen
-// Testar distmappen
