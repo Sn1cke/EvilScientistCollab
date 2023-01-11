@@ -1,23 +1,3 @@
-/*
-const arrScientists: scientists[] = [
-    {
-    name: true,
-    age: 36,
-    henchmen: 2,
-    description: "Stark som fan",
-    },
-    {
-    name: "Ollof",
-    age: 14,
-    henchmen: 2,
-    description: "Number1234",
-    },
-];
-
-const numberArr: number[] = [1, "x", 3, 4];
-*/
-
-// ====================================================
 
 type Scientist = {
   name: string;
@@ -60,5 +40,3 @@ let scientistDB: {
   },
 };
 
-// Jeremy Test
-// Nytt Test
