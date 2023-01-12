@@ -1,7 +1,7 @@
 # evil-scientist
 A simple program to add, load and view a list of scientists.
 
-##Description of assignment
+## Description of assignment
 Create a web page with three sections:
 
 * a form to add a new evil scientist
