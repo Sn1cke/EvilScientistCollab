@@ -45,8 +45,6 @@ let scientistDB: {
       henchmen: henchmen,
       description: description,
     };
-
-
     this.scientists.push(newScientist);
   },
 
@@ -77,11 +75,15 @@ addBtn?.addEventListener('click', function (e) {
   const sciHenchmen = document.querySelector('.henchmen-input') as HTMLInputElement;
   const sciDescription = document.querySelector('.inputfält4') as HTMLInputElement;
 
-  scientistDB.addScientist(sciName.value, parseFloat(sciAge.value), parseFloat(sciHenchmen.value), sciDescription.value)
-  scientistDB.clearScientists();
-  scientistDB.loadScientist(scientistDB.scientists);
+  if (sciName.value.length !== 0 && sciAge.value.length !== 0 && sciHenchmen.value.length !== 0 && sciDescription.value.length !== 0) {
+    scientistDB.addScientist(sciName.value, parseFloat(sciAge.value), parseFloat(sciHenchmen.value), sciDescription.value)
+    scientistDB.clearScientists();
+    scientistDB.loadScientist(scientistDB.scientists);
+    (document.querySelector('#scientist-form') as HTMLFormElement).reset();
+  } else {
+    alert(`You can't leave any fields empty`)
+  }
 
-  (document.querySelector('#scientist-form') as HTMLFormElement).reset
 })
 
 
