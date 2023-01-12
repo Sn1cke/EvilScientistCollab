@@ -10,6 +10,7 @@ let scientistDB: {
   scientists: Scientist[];
   addScientist: (n: string, a: number, h: number, d: string) => void;
   loadScientist: (arr: Scientist[]) => void;
+  clearScientists: () => void;
 } = {
   scientists: [
     {
@@ -26,19 +27,27 @@ let scientistDB: {
     },
   ],
 
+  clearScientists: function () {
+    const clearCards = document.querySelectorAll('.scientist-card');
+    clearCards.forEach(card => card.remove());
+  },
+
   addScientist: function (
     name: string,
     age: number,
     henchmen: number,
     description: string
   ): void {
-    const x: Scientist = {
+
+    const newScientist: Scientist = {
       name: name,
       age: age,
       henchmen: henchmen,
       description: description,
     };
-    this.scientists.push(x);
+
+
+    this.scientists.push(newScientist);
   },
 
   loadScientist: function (arr) {
@@ -57,19 +66,28 @@ let scientistDB: {
   },
 };
 
+// ========== Lägger till en scientist och pushar in i array + uppdaterar listan
+const addBtn = document.querySelector('.addButton') as HTMLButtonElement;
+
+addBtn?.addEventListener('click', function (e) {
+  e.preventDefault();
+
+  const sciName = document.querySelector('.name-input') as HTMLInputElement;
+  const sciAge = document.querySelector('.age-input') as HTMLInputElement;
+  const sciHenchmen = document.querySelector('.henchmen-input') as HTMLInputElement;
+  const sciDescription = document.querySelector('.inputfält4') as HTMLInputElement;
+
+  scientistDB.addScientist(sciName.value, parseFloat(sciAge.value), parseFloat(sciHenchmen.value), sciDescription.value)
+  scientistDB.clearScientists();
+  scientistDB.loadScientist(scientistDB.scientists);
+
+  (document.querySelector('#scientist-form') as HTMLFormElement).reset
+})
+
+
+
 
 
 // Laddar de två scientists vi har i arrayen än så länge
 scientistDB.loadScientist(scientistDB.scientists);
 
-const nameInput = document.querySelector('.name-input') as HTMLInputElement;
-const addBtn = document.querySelector('.addButton') as HTMLButtonElement;
-
-
-
-addBtn?.addEventListener('click', function (e) {
-  e.preventDefault();
-
-  
-
-})
