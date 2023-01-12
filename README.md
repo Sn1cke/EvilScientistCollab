@@ -18,12 +18,12 @@ All added evil scientist should be listed here by name. If you click on a name t
 * Create a type alias for an evil scientist object
 * Create an array of evil scientist objects
 * You need an eventlistener on the Add button
-* The event listeners callback should
-* *  read all data from form input fields and then empty the input fields
-* *  add all data to array
-* *  add a new div for the name
-* *  add an event listener to div with name
-* *  name div eventlistener should show all details from array to detail view
+The event listeners callback should
+*   read all data from form input fields and then empty the input fields
+*   add all data to array
+*   add a new div for the name
+*   add an event listener to div with name
+*   name div eventlistener should show all details from array to detail view
 
 ## Technologies
 * Typescript
