@@ -1,4 +1,4 @@
-# evil-scientist
+# Evil Scientist Database
 A simple program to add, load and view a list of scientists.
 
 ## Description of assignment

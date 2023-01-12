@@ -81,7 +81,7 @@ addBtn?.addEventListener('click', function (e) {
     scientistDB.loadScientist(scientistDB.scientists);
     (document.querySelector('#scientist-form') as HTMLFormElement).reset();
   } else {
-    alert(`You can't leave any fields empty`)
+    alert(`Please fill in all fields about the scientist!`)
   }
 
 })
