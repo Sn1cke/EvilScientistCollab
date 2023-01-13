@@ -60,6 +60,18 @@ let scientistDB: {
       const scientistName = document.createElement('h3');
       scientistName.textContent = sci.name;
       scientistCard.append(scientistName);
+
+      console.log(scientistName.innerHTML);
+
+      scientistName.addEventListener('click', function () {
+
+        const highlightedScientist = document.querySelector('.Highlighted-Scientist') as HTMLElement;
+        
+        const descCard = document.createElement('section');
+        descCard.className = "desc-card"
+        highlightedScientist.append(descCard);
+
+      })
     });
   },
 };
@@ -85,8 +97,6 @@ addBtn?.addEventListener('click', function (e) {
   }
 
 })
-
-
 
 
 
