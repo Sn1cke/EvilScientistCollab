@@ -71,6 +71,9 @@ let scientistDB: {
         descCard.className = "desc-card"
         highlightedScientist.append(descCard);
 
+        // Vad håller du på med???
+        highlightedScientist.append(scientistName);
+
       })
     });
   },
