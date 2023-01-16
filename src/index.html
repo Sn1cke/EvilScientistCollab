@@ -10,23 +10,28 @@
 </head>
 
 <body>
-    <div class="rubrik">
+    <div id="rubrik">
         <h1>Evil Scientist DB</h1>
     </div>
-    <div class="Add-Scientist">
+    <div id="Add-Scientist">
         <h2>Add Scientist</h2>
-        <input placeholder="Name" class="input1" type="text">
-        <input placeholder="Age" class="input1" type="text">
-        <input placeholder="Amount of Henchmen" class="input1" type="text">
-        <textarea placeholder="Description of Scientist" class="inputfält4"></textarea>
-        <button class="addButton">Add Scientist</button>
+        <input placeholder="Name" id="name" type="text">
+        <input placeholder="Age" id="age" type="number">
+        <input placeholder="Amount of Henchmen" id="henchmen" type="text">
+        <textarea placeholder="Description of Scientist" id="description"></textarea>
+        <button id="addButton">Add Scientist</button>
     </div>
-    <div class="All-Scientist">
+    <div id="All-Scientist">
         <h2>All Scientist</h2>
+        <div id="divlocation"></div>
     </div>
-    <div class="Highlightet-Scientist">
+    <div id="Highlightet-Scientist">
         <h2>Highlighted Scientist</h2>
+        <div id="descriptionlocation"></div>
     </div>
+
+    <!-- <a id="MBJ" href="https://www.linkedin.com/in/jesper-flood/">Made By Jesper Flood</a> -->
+    <script src="../dist/app.js"></script>
 </body>
 
 </html>
